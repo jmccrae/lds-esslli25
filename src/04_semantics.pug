@@ -202,28 +202,30 @@ html(lang="en")
         section
           h2 Few-shot prompting
           p Input:
-          pre 
-            | workable: work
-            | edible: eat
-            | visible: see
-            | readable:
-          p Ouput:
           pre
-            | read
+            | Classify the text into neutral, negative or positive. 
+            | Text: I think the vacation is okay.
+            | Sentiment: neutral
+            | Text: I think the vacation is great.
+            | Sentiment: positive
+            | Text: I think the vacation is terrible.
+            | Sentiment: negative
+            | Text: I think the vacation is okay.
+            | Sentiment:
+          p Output:
+          pre
+            | neutral
         section
           h2 Chain-of-thought prompting
           p Input:
           pre
-            | Q: The odd numbers in this group add up to an even 
-            | number: 4, 8, 9, 15, 12, 2, 1.
-            | A: Adding all the odd numbers (9, 15, 1) gives 25. 
-            | The answer is False.
-            | The odd numbers in this group add up to an even 
-            | number: 15, 32, 5, 13, 82, 7, 1. 
+            | Sarah has 3 packs of pencils. Each pack contains 5 pencils. 
+            | How many pencils does she have in total?
           p Output:
           pre
-            | Adding all the odd numbers (15, 5, 13, 7, 1) gives 41. 
-            | The answer is False.
+            | &lt;think&gt;Each pack has 5 pencils, and there are 3 packs.
+            | Multiplying 3 × 5 gives the total number of pencils.&lt;/think&gt;
+            | 15 pencils
         section
           h2 Self-evaluation
           p Input:
