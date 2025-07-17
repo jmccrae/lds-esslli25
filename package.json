@@ -3,6 +3,6 @@
     "pug-cli": "^1.0.0-alpha6"
   },
   "scripts": {
-    "build": "pug src/ -o dist/"
+    "build": "pug src/ -o dist/ && cp -r static/* dist/"
   }
 }
